@@ -1,0 +1,15 @@
+name: Debug Network Reachability
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: curl parivahan
+        run: curl -s -o /dev/null -w "parivahan: HTTP %{http_code}, connect %{time_connect}s, total %{time_total}s\n" --max-time 15 https://echallan.parivahan.gov.in/index/accused-challan || echo "parivahan: curl failed/timed out"
+      - name: curl ts eChallan
+        run: curl -s -o /dev/null -w "ts_echallan: HTTP %{http_code}, connect %{time_connect}s, total %{time_total}s\n" --max-time 15 https://echallan.tspolice.gov.in/publicview/ || echo "ts_echallan: curl failed/timed out"
+      - name: runner IP / ASN
+        run: curl -s --max-time 10 https://ifconfig.me; echo
