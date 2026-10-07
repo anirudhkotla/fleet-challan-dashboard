@@ -46,8 +46,12 @@ def solve(image_bytes, charset=ALNUM, max_retries=3):
     if os.environ.get("GEMINI_API_KEY"):
         try:
             return solve_gemini(image_bytes, charset=charset, max_retries=max_retries)
-        except Exception:
-            pass
+        except Exception as exc:
+            # confirmed live 2026-10-07: silently swallowing this (bare
+            # `except Exception: pass`) hid a 100%-failure-rate Gemini bug on
+            # GitHub Actions behind a misleading "tesseract not found" error
+            # instead -- always surface the real cause before falling back.
+            print(f"  [captcha_solver] Gemini failed, falling back to tesseract: {exc}")
     return solve_tesseract(image_bytes, charset=charset)
 
 

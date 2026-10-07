@@ -9,7 +9,16 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
     steps:
+      - name: curl gemini api
+        run: |
+          echo "key length: ${#GEMINI_API_KEY}"
+          curl -s -w "\ngemini: HTTP %{http_code}, connect %{time_connect}s, total %{time_total}s\n" --max-time 15 \
+            "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=${GEMINI_API_KEY}" \
+            -H "Content-Type: application/json" \
+            -d '{"contents":[{"parts":[{"text":"say ok"}]}]}' || echo "gemini: curl failed/timed out"
       - name: curl parivahan
         run: |
           curl -s -o /dev/null -w "parivahan: HTTP %{http_code}, connect %{time_connect}s, total %{time_total}s\n" --max-time 15 https://echallan.parivahan.gov.in/index/accused-challan || echo "parivahan: curl failed/timed out"
