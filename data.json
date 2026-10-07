@@ -1,0 +1,401 @@
+{
+  "generated_at": "2026-10-07T04:26:12.130791+00:00",
+  "challans": [
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1034",
+      "challan_no": "DL321114260124151830",
+      "date": "2026-01-24 15:18:30",
+      "amount": "500",
+      "paid": true,
+      "first_seen": "2026-10-07T01:46:38.538179+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1034",
+      "challan_no": "DL297806260228113054",
+      "date": "2026-02-28 11:30:54",
+      "amount": "500",
+      "paid": true,
+      "first_seen": "2026-10-07T01:46:38.537308+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1034",
+      "challan_no": "DL143452260306183736",
+      "date": "2026-03-06 18:37:36",
+      "amount": "20000",
+      "paid": true,
+      "first_seen": "2026-10-07T01:46:38.535470+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1047",
+      "challan_no": "DL17904250325100453",
+      "date": "2025-03-25 10:04:53",
+      "amount": "500",
+      "paid": true,
+      "first_seen": "2026-10-07T01:54:20.066938+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1047",
+      "challan_no": "DL213988251015133717",
+      "date": "2025-10-15 13:37:17",
+      "amount": "500",
+      "paid": true,
+      "first_seen": "2026-10-07T01:54:20.066931+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1047",
+      "challan_no": "DL321114260209163650",
+      "date": "2026-02-09 16:36:50",
+      "amount": "500",
+      "paid": true,
+      "first_seen": "2026-10-07T01:54:20.066870+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1116",
+      "challan_no": "DL295079251227131038",
+      "date": "2025-12-27 13:10:38",
+      "amount": "500",
+      "paid": true,
+      "first_seen": "2026-10-07T01:47:01.586132+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1116",
+      "challan_no": "DL60154260214144005",
+      "date": "2026-02-14 14:40:05",
+      "amount": "500",
+      "paid": true,
+      "first_seen": "2026-10-07T01:47:01.585990+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1117",
+      "challan_no": "DL223304250627205500",
+      "date": "2025-06-27 20:55:00",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:48:09.743444+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1117",
+      "challan_no": "DL294416260616141633",
+      "date": "2026-06-16 14:16:33",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:48:09.743417+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1117",
+      "challan_no": "DL127238260903172319",
+      "date": "2026-09-03 17:23:19",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:48:09.743300+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1137",
+      "challan_no": "DL285931260620170337",
+      "date": "2026-06-20 17:03:37",
+      "amount": "10000",
+      "paid": false,
+      "first_seen": "2026-10-07T01:50:57.699783+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1137",
+      "challan_no": "DL285931260620170424",
+      "date": "2026-06-20 17:03:37",
+      "amount": "10000",
+      "paid": false,
+      "first_seen": "2026-10-07T01:50:57.699791+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1137",
+      "challan_no": "DL293540260622073837",
+      "date": "2026-06-22 07:38:37",
+      "amount": "2500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:50:57.699659+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1442",
+      "challan_no": "DL18200250603093306",
+      "date": "2025-06-03 09:33:06",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:40:06.888694+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1442",
+      "challan_no": "DL285931260703191048",
+      "date": "2026-07-03 19:10:48",
+      "amount": "10000",
+      "paid": false,
+      "first_seen": "2026-10-07T01:40:06.888117+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1442",
+      "challan_no": "DL285931260703191246",
+      "date": "2026-07-03 19:10:48",
+      "amount": "10000",
+      "paid": false,
+      "first_seen": "2026-10-07T01:40:06.888683+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1462",
+      "challan_no": "DL314953260208202204",
+      "date": "2026-02-08 20:22:04",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:46:14.063763+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1462",
+      "challan_no": "DL9544260216204715",
+      "date": "2026-02-16 20:47:15",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:46:14.063515+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1462",
+      "challan_no": "DL328378260303123531",
+      "date": "2026-03-03 12:35:31",
+      "amount": "1500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:46:14.062158+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1498",
+      "challan_no": "DL106445220402175945",
+      "date": "2022-04-02 17:59:45",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:47:46.191037+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1505",
+      "challan_no": "DL31352221013164705",
+      "date": "2022-10-13 16:47:05",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:49:58.352954+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1505",
+      "challan_no": "DL215633250602102234",
+      "date": "2025-06-02 10:22:34",
+      "amount": "5000",
+      "paid": false,
+      "first_seen": "2026-10-07T01:49:58.352937+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1505",
+      "challan_no": "DL215633250602102732",
+      "date": "2025-06-02 10:22:34",
+      "amount": "5000",
+      "paid": false,
+      "first_seen": "2026-10-07T01:49:58.352944+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1505",
+      "challan_no": "DL20358250620212441",
+      "date": "2025-06-20 21:24:41",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:49:58.352932+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1505",
+      "challan_no": "DL314994260413183412",
+      "date": "2026-04-13 18:34:12",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:49:58.352920+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1505",
+      "challan_no": "DL128049260427180518",
+      "date": "2026-04-27 18:05:18",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:49:58.352660+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1715",
+      "challan_no": "DL17949250515075739",
+      "date": "2025-05-15 07:57:39",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:38:45.875302+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1715",
+      "challan_no": "DL213374260727134722",
+      "date": "2026-07-27 13:47:22",
+      "amount": "10500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:38:45.872050+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1715",
+      "challan_no": "DL213374260727135125",
+      "date": "2026-07-27 13:47:22",
+      "amount": "10000",
+      "paid": false,
+      "first_seen": "2026-10-07T01:38:45.875262+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1718",
+      "challan_no": "DL19919220201130745",
+      "date": "2022-02-01 13:07:45",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:40:14.152414+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1776",
+      "challan_no": "DL127628230223155623",
+      "date": "2023-02-23 15:56:23",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:44:35.340152+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL1ZD1785",
+      "challan_no": "DL6688220902161221",
+      "date": "2022-09-02 16:12:21",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T01:46:38.591895+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL52GD2157",
+      "challan_no": "DL136801230915124040",
+      "date": "2023-09-15 12:40:40",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T02:05:00.025113+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL52GD2157",
+      "challan_no": "DL66009250826151431",
+      "date": "2025-08-26 15:14:31",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T02:05:00.025093+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "DL52GD2157",
+      "challan_no": "DL19077260509195229",
+      "date": "2026-05-09 19:52:29",
+      "amount": "500",
+      "paid": false,
+      "first_seen": "2026-10-07T02:05:00.024952+00:00"
+    },
+    {
+      "portal": "parivahan",
+      "reg_no": "KA01AN2813",
+      "challan_no": "KL124583260213162337",
+      "date": "2026-02-13 16:23:37",
+      "amount": "250",
+      "paid": false,
+      "first_seen": "2026-10-07T02:27:25.121632+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1895",
+      "challan_no": "CYB13CR263892909",
+      "date": "06-Oct-2026",
+      "amount": "700",
+      "paid": false,
+      "first_seen": "2026-10-07T02:04:13.630887+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1895",
+      "challan_no": "HYD27ME269328741",
+      "date": "14-Jan-2026",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T02:04:13.630877+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1895",
+      "challan_no": "CYB13EC253728945",
+      "date": "23-Sep-2025",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T02:04:13.630382+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS09EA5678",
+      "challan_no": "MKG04LG269420308",
+      "date": "09-Aug-2026",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T01:05:37.956002+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS09EA5678",
+      "challan_no": "HYD10LG26904968",
+      "date": "20-Feb-2026",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T01:05:37.955978+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS09EA5678",
+      "challan_no": "CYB05LG260916129",
+      "date": "20-Feb-2026",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T01:05:37.955995+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS09EA5678",
+      "challan_no": "RCK06EC241177059",
+      "date": "21-Nov-2024",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T01:05:37.955855+00:00"
+    }
+  ]
+}

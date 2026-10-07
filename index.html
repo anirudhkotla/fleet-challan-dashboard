@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fleet Challan Dashboard</title>
+<style>
+  :root {
+    --bg: #eef0f3; --bg-raised: #ffffff; --ink: #1a1d23; --ink-dim: #5b6270; --ink-faint: #9aa1ad;
+    --line: #d7dae0; --line-soft: #e6e8ec; --accent: #b5661f; --accent-soft: #f3e3d2;
+    --good: #2f7a4f; --good-soft: #e1f0e6; --bad: #b23a3a; --bad-soft: #f7e3e3;
+    --mono: "SF Mono", Menlo, Consolas, monospace;
+    --body: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --display: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    --shadow: 0 1px 2px rgba(20,20,30,.04), 0 8px 24px -12px rgba(20,20,30,.12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a; --bg-raised: #1c1f25; --ink: #edeef0; --ink-dim: #a3a9b3; --ink-faint: #676d78;
+      --line: #2c2f36; --line-soft: #23262c; --accent: #e0975a; --accent-soft: #3a2a18;
+      --good: #6fcf97; --good-soft: #1b2e22; --bad: #e58080; --bad-soft: #342020;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body);
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 920px; margin: 0 auto; padding: 48px 20px 96px; }
+  header { margin-bottom: 32px; }
+  .eyebrow {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); display: flex; align-items: center; gap: 8px; margin-bottom: 8px;
+  }
+  .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  h1 { font-family: var(--display); font-weight: 400; font-size: clamp(26px, 4vw, 34px); margin: 0 0 6px; }
+  .snapshot-note {
+    font-size: 13px; color: var(--ink-dim); background: var(--bg-raised); border: 1px solid var(--line);
+    border-radius: 8px; padding: 10px 14px; display: inline-block;
+  }
+  .snapshot-note b { color: var(--ink); }
+
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line);
+    border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin: 28px 0; box-shadow: var(--shadow);
+  }
+  .stat { background: var(--bg-raised); padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; }
+  .stat .n { font-family: var(--display); font-size: 26px; font-variant-numeric: tabular-nums; }
+  .stat .n.bad { color: var(--bad); }
+  .stat .label { font-size: 11px; color: var(--ink-dim); text-transform: uppercase; letter-spacing: .05em; }
+
+  .filter-bar { display: flex; gap: 8px; margin-bottom: 10px; }
+  .filter-bar input {
+    flex: 1; font: inherit; font-size: 13.5px; padding: 9px 12px; border: 1px solid var(--line);
+    border-radius: 8px; background: var(--bg-raised); color: var(--ink);
+  }
+  .filter-bar select {
+    font: inherit; font-size: 13.5px; padding: 9px 12px; border: 1px solid var(--line);
+    border-radius: 8px; background: var(--bg-raised); color: var(--ink);
+  }
+  .result-count { font-size: 12.5px; color: var(--ink-dim); margin-bottom: 14px; }
+
+  .card { background: var(--bg-raised); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th {
+    text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-dim);
+    padding: 10px 16px; border-bottom: 1px solid var(--line); white-space: nowrap;
+  }
+  td { padding: 11px 16px; border-bottom: 1px solid var(--line-soft); vertical-align: middle; }
+  tr:last-child td { border-bottom: none; }
+  td.mono { font-family: var(--mono); font-size: 12.5px; white-space: nowrap; }
+  td.amount { font-family: var(--mono); text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .reg { font-family: var(--mono); font-weight: 700; background: var(--accent-soft); color: var(--accent); padding: 2px 7px; border-radius: 5px; font-size: 12.5px; }
+  .badge { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 100px; display: inline-block; }
+  .badge.unpaid { background: var(--bad-soft); color: var(--bad); }
+  .badge.paid { background: var(--good-soft); color: var(--good); }
+
+  .pagination { display: flex; align-items: center; justify-content: center; gap: 14px; padding: 14px 16px; border-top: 1px solid var(--line); }
+  .pagination button {
+    font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; background: var(--bg-raised);
+    color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 6px 12px;
+  }
+  .pagination button:disabled { opacity: .4; cursor: default; }
+  .pagination button:not(:disabled):hover { border-color: var(--accent); color: var(--accent); }
+  .page-indicator { font-size: 12.5px; color: var(--ink-dim); font-family: var(--mono); }
+  .empty { padding: 40px 16px; text-align: center; color: var(--ink-dim); font-size: 14px; }
+
+  footer { margin-top: 32px; font-size: 12px; color: var(--ink-faint); text-align: center; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="eyebrow">read-only snapshot</div>
+    <h1>Fleet Challan Dashboard</h1>
+    <div class="snapshot-note">
+      Generated <b id="generatedAt">&hellip;</b> &middot; static data, not live &mdash; re-publish to refresh
+    </div>
+  </header>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="filter-bar">
+    <input id="filterInput" placeholder="Filter by vehicle or challan no..." autocomplete="off">
+    <select id="statusFilter">
+      <option value="all">All</option>
+      <option value="unpaid" selected>Unpaid only</option>
+      <option value="paid">Paid only</option>
+    </select>
+  </div>
+  <div id="resultCount" class="result-count"></div>
+
+  <div class="card">
+    <div class="table-wrap">
+      <table id="challanTable">
+        <thead>
+          <tr>
+            <th>Vehicle</th><th>Echallan No</th><th>Date</th><th>Portal</th>
+            <th style="text-align:right">Amount</th><th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="pagination" id="pagination"></div>
+  </div>
+
+  <footer>Lithium fleet challan tracker &middot; data via Parivahan + Telangana eChallan</footer>
+</div>
+
+<script>
+const PAGE_SIZE = 15;
+let currentPage = 1;
+let ALL_ROWS = [];
+
+function fmtDate(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  if (isNaN(d)) return iso;
+  return d.toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
+}
+
+function render() {
+  const query = document.getElementById("filterInput").value.trim().toLowerCase();
+  const statusFilter = document.getElementById("statusFilter").value;
+
+  let matched = ALL_ROWS.filter(r => {
+    if (statusFilter === "unpaid" && r.paid) return false;
+    if (statusFilter === "paid" && !r.paid) return false;
+    if (query && !(r.reg_no.toLowerCase().includes(query) || r.challan_no.toLowerCase().includes(query))) return false;
+    return true;
+  });
+
+  const totalPages = Math.max(1, Math.ceil(matched.length / PAGE_SIZE));
+  currentPage = Math.min(Math.max(currentPage, 1), totalPages);
+  const pageRows = matched.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+
+  const tbody = document.getElementById("tbody");
+  if (!pageRows.length) {
+    tbody.innerHTML = '<tr><td colspan="6"><div class="empty">No matching challans.</div></td></tr>';
+  } else {
+    tbody.innerHTML = pageRows.map(r => `
+      <tr>
+        <td><span class="reg">${r.reg_no}</span></td>
+        <td class="mono">${r.challan_no}</td>
+        <td class="mono">${r.date || ""}</td>
+        <td class="mono">${r.portal}</td>
+        <td class="amount">&#8377;${r.amount || "0"}</td>
+        <td><span class="badge ${r.paid ? "paid" : "unpaid"}">${r.paid ? "Paid" : "Unpaid"}</span></td>
+      </tr>
+    `).join("");
+  }
+
+  document.getElementById("resultCount").textContent =
+    query || statusFilter !== "all" ? `${matched.length} of ${ALL_ROWS.length} matching` : `${ALL_ROWS.length} total`;
+
+  const pag = document.getElementById("pagination");
+  if (!matched.length) { pag.innerHTML = ""; return; }
+  pag.innerHTML = `
+    <button ${currentPage <= 1 ? "disabled" : ""} onclick="goPage(${currentPage - 1})">Prev</button>
+    <span class="page-indicator">Page ${currentPage} of ${totalPages}</span>
+    <button ${currentPage >= totalPages ? "disabled" : ""} onclick="goPage(${currentPage + 1})">Next</button>
+  `;
+}
+
+function goPage(p) { currentPage = p; render(); }
+
+function renderStats() {
+  const unpaid = ALL_ROWS.filter(r => !r.paid);
+  const totalAmount = unpaid.reduce((sum, r) => sum + (parseInt(r.amount, 10) || 0), 0);
+  const vehicles = new Set(ALL_ROWS.map(r => r.reg_no));
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><div class="n">${vehicles.size}</div><div class="label">Vehicles tracked</div></div>
+    <div class="stat"><div class="n bad">${unpaid.length}</div><div class="label">Unpaid challans</div></div>
+    <div class="stat"><div class="n bad">&#8377;${totalAmount.toLocaleString("en-IN")}</div><div class="label">Pending fine total</div></div>
+    <div class="stat"><div class="n">${ALL_ROWS.length - unpaid.length}</div><div class="label">Paid challans</div></div>
+  `;
+}
+
+fetch("data.json")
+  .then(r => r.json())
+  .then(data => {
+    ALL_ROWS = data.challans;
+    document.getElementById("generatedAt").textContent = fmtDate(data.generated_at);
+    renderStats();
+    render();
+  });
+
+document.getElementById("filterInput").addEventListener("input", () => { currentPage = 1; render(); });
+document.getElementById("statusFilter").addEventListener("change", () => { currentPage = 1; render(); });
+</script>
+</body>
+</html>
