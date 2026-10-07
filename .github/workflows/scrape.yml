@@ -2,7 +2,7 @@ name: Scrape Fleet Challans
 
 on:
   schedule:
-    - cron: '30 1 * * *'  # ~7:00 AM IST daily
+    - cron: '0 */2 * * *'  # every 2 hours -- TS eChallan only, see scraper/run_shard.py
   workflow_dispatch:
 
 env:

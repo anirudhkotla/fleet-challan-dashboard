@@ -4,6 +4,16 @@ No SQLite here -- GitHub Actions runners are ephemeral/stateless, so each
 shard just emits its raw findings; a separate merge step (merge_results.py)
 combines every shard's output with the dashboard's existing data.json.
 
+TS eChallan only -- confirmed live 2026-10-07 via a plain curl from an
+Actions runner: echallan.parivahan.gov.in returns HTTP 000 (connect refused/
+timeout) from GitHub's Azure IP ranges, while echallan.tspolice.gov.in
+responds normally in ~1.4s. Parivahan actively blocks cloud/datacenter IPs;
+every attempt from here would just burn ~2 minutes failing before giving up
+(confirmed: the first full run sat at 0/20 shards after 47 minutes for
+exactly this reason). The nationwide Parivahan portion runs from
+local/scraper_local.py instead (a residential IP, where it already works)
+and merges into this same data.json.
+
 Usage: python3 run_shard.py vehicles_shard.txt out.json
   (vehicles_shard.txt: one reg_no per line)
 """
@@ -14,12 +24,12 @@ import sys
 
 from playwright.async_api import async_playwright
 
-import parivahan
 import ts_echallan
 
-CONCURRENCY = 4  # Actions runners are dedicated (2-core free tier, no other
-# load competing for CPU/network the way a local machine running other
-# work does), so this can run higher than the local tool's CONCURRENCY=2.
+CONCURRENCY = 8  # Actions runners are dedicated (no other load competing
+# for CPU/network the way a local machine running other work does), and
+# with only ts_echallan left to scrape (no more wasted Parivahan timeouts)
+# there's plenty of headroom above the local tool's CONCURRENCY=2.
 UA = ts_echallan.UA
 
 
@@ -42,7 +52,6 @@ async def run(vehicles):
         browser = await pw.chromium.launch(headless=True)
         tasks = []
         for reg_no in vehicles:
-            tasks.append(_run_one(sem, browser, parivahan, "parivahan", reg_no))
             tasks.append(_run_one(sem, browser, ts_echallan, "ts_echallan", reg_no))
 
         for coro in asyncio.as_completed(tasks):
