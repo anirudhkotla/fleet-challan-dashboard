@@ -1,0 +1,86 @@
+name: Scrape Fleet Challans
+
+on:
+  schedule:
+    - cron: '30 1 * * *'  # ~7:00 AM IST daily
+  workflow_dispatch:
+
+env:
+  SHARD_COUNT: 20
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      shards: ${{ steps.split.outputs.shards }}
+    steps:
+      - name: Split vehicle list into shards
+        id: split
+        env:
+          VEHICLES_LIST: ${{ secrets.FLEET_VEHICLES }}
+        run: |
+          echo "$VEHICLES_LIST" | tr ',' '\n' | sed '/^$/d' > all_vehicles.txt
+          echo "fleet size: $(wc -l < all_vehicles.txt)"
+          split -n l/${{ env.SHARD_COUNT }} -d --additional-suffix=.txt all_vehicles.txt shard_
+          ls shard_*
+          echo "shards=$(python3 -c "import json; print(json.dumps(list(range(${{ env.SHARD_COUNT }}))))")" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shard-files
+          path: shard_*.txt
+
+  scrape:
+    needs: prepare
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJson(needs.prepare.outputs.shards) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: shard-files
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q -r scraper/requirements.txt
+      - run: python3 -m playwright install --with-deps chromium
+      - name: Scrape shard
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          SHARD_FILE=$(printf "shard_%02d.txt" ${{ matrix.shard }})
+          python3 scraper/run_shard.py "$SHARD_FILE" "result_${{ matrix.shard }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: result-${{ matrix.shard }}
+          path: result_${{ matrix.shard }}.json
+          if-no-files-found: ignore
+
+  merge:
+    needs: scrape
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: result-*
+          path: results
+          merge-multiple: true
+      - name: Merge shard results into data.json
+        run: |
+          python3 scraper/merge_results.py data.json results/*.json > data.json.new
+          mv data.json.new data.json
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git diff --cached --quiet || git commit -m "Update challan data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
