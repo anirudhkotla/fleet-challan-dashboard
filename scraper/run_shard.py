@@ -20,6 +20,7 @@ Usage: python3 run_shard.py vehicles_shard.txt out.json
 
 import asyncio
 import json
+import re
 import sys
 
 from playwright.async_api import async_playwright
@@ -31,6 +32,13 @@ CONCURRENCY = 8  # Actions runners are dedicated (no other load competing
 # with only ts_echallan left to scrape (no more wasted Parivahan timeouts)
 # there's plenty of headroom above the local tool's CONCURRENCY=2.
 UA = ts_echallan.UA
+
+# ts_echallan is Telangana Police's own portal -- confirmed live 2026-10-07
+# (local run, 551 successful checks against non-TS/TG plates, zero challans
+# found): it can only ever have data for Telangana-registered vehicles.
+# Skip anything else entirely -- no browser context, no captcha-solving,
+# nothing -- rather than burn Actions minutes confirming what we already know.
+TELANGANA_PLATE_RE = re.compile(r"^(TS|TG)")
 
 
 async def _run_one(sem, browser, module, portal_name, reg_no):
@@ -51,8 +59,14 @@ async def run(vehicles):
     async with async_playwright() as pw:
         browser = await pw.chromium.launch(headless=True)
         tasks = []
+        skipped = 0
         for reg_no in vehicles:
-            tasks.append(_run_one(sem, browser, ts_echallan, "ts_echallan", reg_no))
+            if TELANGANA_PLATE_RE.match(reg_no):
+                tasks.append(_run_one(sem, browser, ts_echallan, "ts_echallan", reg_no))
+            else:
+                skipped += 1
+        if skipped:
+            print(f"  skipped {skipped} non-Telangana vehicles (ts_echallan can't have their data)")
 
         for coro in asyncio.as_completed(tasks):
             portal_name, reg_no, result = await coro

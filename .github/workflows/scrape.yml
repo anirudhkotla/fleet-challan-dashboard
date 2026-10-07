@@ -6,7 +6,9 @@ on:
   workflow_dispatch:
 
 env:
-  SHARD_COUNT: 20
+  SHARD_COUNT: 8  # lowered from 20 -- confirmed live 2026-10-07: ts_echallan
+  # only ever has data for TS/TG-plated vehicles (~19% of the fleet), now
+  # filtered out before sharding, so far fewer jobs are needed
 
 permissions:
   contents: write
@@ -24,7 +26,12 @@ jobs:
         run: |
           echo "$VEHICLES_LIST" | tr ',' '\n' | sed '/^$/d' > all_vehicles.txt
           echo "fleet size: $(wc -l < all_vehicles.txt)"
-          split -n l/${{ env.SHARD_COUNT }} -d --additional-suffix=.txt all_vehicles.txt shard_
+          # ts_echallan (this workflow's only portal, see scraper/run_shard.py)
+          # can only ever have data for Telangana-registered plates -- filter
+          # here, before sharding, rather than spin up jobs that mostly skip.
+          grep -E '^(TS|TG)' all_vehicles.txt > telangana_vehicles.txt || true
+          echo "telangana subset: $(wc -l < telangana_vehicles.txt)"
+          split -n l/${{ env.SHARD_COUNT }} -d --additional-suffix=.txt telangana_vehicles.txt shard_
           ls shard_*
           echo "shards=$(python3 -c "import json; print(json.dumps(list(range(${{ env.SHARD_COUNT }}))))")" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-artifact@v4
