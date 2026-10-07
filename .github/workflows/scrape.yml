@@ -50,6 +50,8 @@ jobs:
           python-version: '3.12'
       - run: pip install -q -r scraper/requirements.txt
       - run: python3 -m playwright install --with-deps chromium
+      - name: Install tesseract (Gemini fallback)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq tesseract-ocr
       - name: Scrape shard
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
