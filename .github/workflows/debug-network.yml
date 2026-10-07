@@ -2,6 +2,9 @@ name: Debug Network Reachability
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/debug-network.yml'
 
 jobs:
   check:
