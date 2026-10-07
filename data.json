@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T10:09:18.964497+00:00",
+  "generated_at": "2026-10-07T17:27:41.217797+00:00",
   "challans": [
     {
       "portal": "parivahan",
@@ -336,6 +336,537 @@
     },
     {
       "portal": "ts_echallan",
+      "reg_no": "TS07UL0853",
+      "challan_no": "CYB43EC254782846",
+      "date": "02-Mar-2025",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL0853",
+      "challan_no": "CYB43EC254786655",
+      "date": "03-Mar-2025",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL0853",
+      "challan_no": "CYB43TC255238331",
+      "date": "03-Mar-2025",
+      "amount": "100",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL1354",
+      "challan_no": "CYB13ET259148780",
+      "date": "29-Oct-2025",
+      "amount": "1000",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5396",
+      "challan_no": "CYB13EC260129803",
+      "date": "02-Feb-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5396",
+      "challan_no": "CYB13EC260129462",
+      "date": "02-Feb-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5396",
+      "challan_no": "CYB13EC260251563",
+      "date": "04-Feb-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5396",
+      "challan_no": "CYB13EC260276540",
+      "date": "05-Feb-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5396",
+      "challan_no": "CYB13EC258243807",
+      "date": "22-Dec-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5896",
+      "challan_no": "CYB43ET263435364",
+      "date": "01-Sep-2026",
+      "amount": "200",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5896",
+      "challan_no": "CYB43EC269552418",
+      "date": "11-Aug-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5896",
+      "challan_no": "CYB43ET263755855",
+      "date": "26-Sep-2026",
+      "amount": "100",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5896",
+      "challan_no": "CYB43ET263364269",
+      "date": "27-Aug-2026",
+      "amount": "1200",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5896",
+      "challan_no": "CYB43ET263376229",
+      "date": "27-Aug-2026",
+      "amount": "200",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5896",
+      "challan_no": "CYB43EC261931224",
+      "date": "28-Sep-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5909",
+      "challan_no": "CYB43ET261065610",
+      "date": "21-Mar-2026",
+      "amount": "200",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL5915",
+      "challan_no": "CYB35EC265519263",
+      "date": "26-May-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL6026",
+      "challan_no": "HYD00SC263300829",
+      "date": "10-Apr-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL6026",
+      "challan_no": "HYD00SC268268809",
+      "date": "15-Jul-2026",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL6034",
+      "challan_no": "HYD07EC260698014",
+      "date": "30-Aug-2026",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL6037",
+      "challan_no": "CYB13EC255975746",
+      "date": "06-Nov-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8173",
+      "challan_no": "CYB43ET263364203",
+      "date": "27-Aug-2026",
+      "amount": "1200",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8274",
+      "challan_no": "HYD02LG251252991",
+      "date": "14-May-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8982",
+      "challan_no": "HYD04EC260368573",
+      "date": "07-Feb-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8982",
+      "challan_no": "HYD22ET26950885",
+      "date": "13-Mar-2026",
+      "amount": "100",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8982",
+      "challan_no": "HYD02EC263341340",
+      "date": "14-Apr-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8982",
+      "challan_no": "HYD07EC242124784",
+      "date": "19-Dec-2024",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8982",
+      "challan_no": "CYB43EC261239892",
+      "date": "26-Feb-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8982",
+      "challan_no": "HYD10EC257105545",
+      "date": "26-Nov-2025",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8986",
+      "challan_no": "HYD13EC257256873",
+      "date": "01-Dec-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8986",
+      "challan_no": "HYD16EC257690086",
+      "date": "13-May-2025",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8986",
+      "challan_no": "CYB43ET261048623",
+      "date": "20-Mar-2026",
+      "amount": "1000",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8993",
+      "challan_no": "CYB43ET262826020",
+      "date": "22-Jul-2026",
+      "amount": "1000",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8993",
+      "challan_no": "RCK02ET26698537",
+      "date": "23-Feb-2026",
+      "amount": "100",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8993",
+      "challan_no": "HYD13ME26248372",
+      "date": "24-Aug-2026",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8997",
+      "challan_no": "CYB43EC253470800",
+      "date": "17-Sep-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8997",
+      "challan_no": "CYB43ET258565897",
+      "date": "19-Sep-2025",
+      "amount": "100",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL8997",
+      "challan_no": "CYB43ET259558464",
+      "date": "26-Nov-2025",
+      "amount": "100",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9017",
+      "challan_no": "HYD11EC260899360",
+      "date": "03-Sep-2026",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9017",
+      "challan_no": "MKG02EC261069364",
+      "date": "08-Sep-2026",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9017",
+      "challan_no": "CYB13CR263633291",
+      "date": "15-Sep-2026",
+      "amount": "700",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9017",
+      "challan_no": "MKG02EC261490955",
+      "date": "17-Sep-2026",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9017",
+      "challan_no": "HYD09EC259462560",
+      "date": "23-Jun-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9024",
+      "challan_no": "CYB05EC250163224",
+      "date": "11-Jul-2025",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9024",
+      "challan_no": "HYD09LG267857059",
+      "date": "11-Jul-2026",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9024",
+      "challan_no": "HYD16LG252612180",
+      "date": "30-Aug-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9027",
+      "challan_no": "CYB43EC261419758",
+      "date": "02-Mar-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9027",
+      "challan_no": "CYB43ET259746978",
+      "date": "09-Dec-2025",
+      "amount": "200",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9027",
+      "challan_no": "CYB43EC261816824",
+      "date": "10-Mar-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9027",
+      "challan_no": "HYD08EC259700049",
+      "date": "30-Jun-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9027",
+      "challan_no": "CYB43EC258538644",
+      "date": "30-May-2025",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9033",
+      "challan_no": "HYD11TE257375241",
+      "date": "17-Jul-2025",
+      "amount": "100",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9033",
+      "challan_no": "CYB72ET257647455",
+      "date": "29-Jul-2025",
+      "amount": "200",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9039",
+      "challan_no": "CYB05TC255709464",
+      "date": "03-Apr-2025",
+      "amount": "200",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9043",
+      "challan_no": "HYD09CR261591786",
+      "date": "28-Apr-2026",
+      "amount": "700",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9045",
+      "challan_no": "HYD18EC266169552",
+      "date": "08-Jun-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9045",
+      "challan_no": "CYB43EC255391289",
+      "date": "24-Oct-2025",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UL9045",
+      "challan_no": "HYD00IT266996946",
+      "date": "25-Jun-2026",
+      "amount": "1735",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1894",
+      "challan_no": "CYB13EC267920847",
+      "date": "11-Jul-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
       "reg_no": "TS07UM1895",
       "challan_no": "CYB13CR263892909",
       "date": "06-Oct-2026",
@@ -360,6 +891,411 @@
       "amount": "235",
       "paid": false,
       "first_seen": "2026-10-07T02:04:13.630382+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1897",
+      "challan_no": "CYB43TC256666236",
+      "date": "03-Jun-2025",
+      "amount": "1000",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1897",
+      "challan_no": "CYB43EC258919560",
+      "date": "09-Jun-2025",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1897",
+      "challan_no": "CYB43EC259312928",
+      "date": "16-Jun-2025",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1902",
+      "challan_no": "CYB43ET263327597",
+      "date": "24-Aug-2026",
+      "amount": "200",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1905",
+      "challan_no": "FCC04LG269068070",
+      "date": "02-Aug-2026",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1905",
+      "challan_no": "CYB13CR263633101",
+      "date": "15-Sep-2026",
+      "amount": "700",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1913",
+      "challan_no": "MKG76EC269571503",
+      "date": "11-Aug-2026",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1923",
+      "challan_no": "MKG79EC267461736",
+      "date": "03-Jul-2026",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1926",
+      "challan_no": "CYB04EC254749313",
+      "date": "13-Oct-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1926",
+      "challan_no": "CYB13EC268314948",
+      "date": "18-Jul-2026",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1930",
+      "challan_no": "HYD125EC260205441",
+      "date": "03-Feb-2026",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1930",
+      "challan_no": "CYB13CR263892788",
+      "date": "06-Oct-2026",
+      "amount": "700",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1930",
+      "challan_no": "CYB12EC261607804",
+      "date": "07-Mar-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1931",
+      "challan_no": "HYD16LG251676178",
+      "date": "10-Jul-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1934",
+      "challan_no": "CYB43EC257580780",
+      "date": "05-Dec-2025",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1934",
+      "challan_no": "CYB51EC267628224",
+      "date": "05-Jul-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1934",
+      "challan_no": "CYB43ET258565831",
+      "date": "19-Sep-2025",
+      "amount": "100",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1934",
+      "challan_no": "CYB43EC254129607",
+      "date": "29-Sep-2025",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1934",
+      "challan_no": "CYB43ET258716449",
+      "date": "29-Sep-2025",
+      "amount": "100",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1937",
+      "challan_no": "CYB43CR263735910",
+      "date": "23-Sep-2026",
+      "amount": "700",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1941",
+      "challan_no": "HYD09EC262249366",
+      "date": "21-Mar-2026",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1941",
+      "challan_no": "CYB51EC261333042",
+      "date": "28-Feb-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1948",
+      "challan_no": "HYD26IT269011878",
+      "date": "08-Jan-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1948",
+      "challan_no": "CYB43ET259746965",
+      "date": "09-Dec-2025",
+      "amount": "200",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1948",
+      "challan_no": "CYB13ET258880587",
+      "date": "11-Oct-2025",
+      "amount": "1000",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1948",
+      "challan_no": "CYB13EC254915058",
+      "date": "11-Oct-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM1948",
+      "challan_no": "HYD28SD26732605",
+      "date": "25-Feb-2026",
+      "amount": "100",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM4580",
+      "challan_no": "HYD09EC267770937",
+      "date": "09-Jul-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM4591",
+      "challan_no": "HYD00SN251554381",
+      "date": "09-Aug-2025",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM4595",
+      "challan_no": "HYD22CR26711112",
+      "date": "24-Feb-2026",
+      "amount": "700",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM4605",
+      "challan_no": "HYD13EC261691064",
+      "date": "09-Mar-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM4605",
+      "challan_no": "HYD16EC261075174",
+      "date": "23-Feb-2026",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM4605",
+      "challan_no": "CYB43CR263735902",
+      "date": "23-Sep-2026",
+      "amount": "700",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM4612",
+      "challan_no": "CYB43ET263828451",
+      "date": "01-Oct-2026",
+      "amount": "1000",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM4931",
+      "challan_no": "HYD10EC251711806",
+      "date": "11-Aug-2025",
+      "amount": "1035",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM4931",
+      "challan_no": "MKG02ET261573790",
+      "date": "27-Apr-2026",
+      "amount": "1000",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM4934",
+      "challan_no": "HYD26IT262339446",
+      "date": "24-Mar-2026",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM5122",
+      "challan_no": "HYD04ME257439963",
+      "date": "04-Dec-2025",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM5122",
+      "challan_no": "MKG02EC268244021",
+      "date": "18-Jul-2026",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM5129",
+      "challan_no": "HYD18EC256094709",
+      "date": "08-Nov-2025",
+      "amount": "235",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM5129",
+      "challan_no": "HYD09EC268161986",
+      "date": "16-Jul-2026",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM5129",
+      "challan_no": "CYB13ET257690737",
+      "date": "30-Jul-2025",
+      "amount": "1000",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM5141",
+      "challan_no": "HYD08EC241043091",
+      "date": "16-Nov-2024",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM5142",
+      "challan_no": "HYD08CR263004825",
+      "date": "03-Aug-2026",
+      "amount": "1600",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM5142",
+      "challan_no": "HYD09EC266550187",
+      "date": "16-Jun-2026",
+      "amount": "135",
+      "paid": false,
+      "first_seen": "2026-10-07T17:27:41.217797+00:00"
     },
     {
       "portal": "ts_echallan",
