@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T18:26:13.357174+00:00",
+  "generated_at": "2026-10-10T23:25:29.181436+00:00",
   "challans": [
     {
       "portal": "parivahan",
@@ -2889,6 +2889,15 @@
       "amount": "1035",
       "paid": false,
       "first_seen": "2026-10-07T23:00:28.157923+00:00"
+    },
+    {
+      "portal": "ts_echallan",
+      "reg_no": "TS07UM4602",
+      "challan_no": "HYD16ET262592931",
+      "date": "07-Jul-2026",
+      "amount": "100",
+      "paid": false,
+      "first_seen": "2026-10-10T23:25:29.181436+00:00"
     },
     {
       "portal": "ts_echallan",
