@@ -87,26 +87,9 @@ jobs:
           python3 scraper/merge_results.py data.json results/*.json > data.json.new
           mv data.json.new data.json
       - name: Commit updated data
-        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json
-          if git diff --cached --quiet; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            git commit -m "Update challan data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-            git push
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
-      # Only emails when data.json actually changed this run -- an unconditional
-      # every-2h send regardless of change is exactly the noise pattern the
-      # lithium-scraper repo's CET pipeline deliberately avoids (its own
-      # per-cycle report email was disabled for mailing on every tick "on top
-      # of" the meaningful summary; same reasoning applies here).
-      - name: Install mail dependency
-        if: steps.commit.outputs.changed == 'true'
-        run: pip install -q requests
-      - name: Share challan data by email
-        if: steps.commit.outputs.changed == 'true'
-        run: python3 scraper/share_challan_data.py data.json
+          git diff --cached --quiet || git commit -m "Update challan data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
