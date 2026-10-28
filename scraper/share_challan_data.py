@@ -27,9 +27,15 @@ def send(data_path, to=None):
     generated_at = data.get("generated_at", "unknown")
 
     to = to or DEFAULT_RECIPIENTS
-    subject = f"TS eChallan data -- {len(challans)} challan(s), generated {generated_at}"
+    # Not "TS eChallan" -- data.json is a cumulative merge, not a fresh TS-only
+    # snapshot. Scraping is TS-only going forward (see merge_results.py's
+    # history and commit b7006e6), but old Delhi/Karnataka rows from before
+    # that pivot are still in here and never purged by a merge, just no
+    # longer refreshed. Keep the subject state-agnostic so it doesn't claim
+    # more precision about the data's coverage than is actually true.
+    subject = f"Fleet Challan data -- {len(challans)} challan(s), generated {generated_at}"
     body = f"""<html><body>
-<p>TS eChallan scrape data attached ({data_path.name}).</p>
+<p>Fleet challan data attached ({data_path.name}).</p>
 <ul>
   <li>Generated at: {generated_at}</li>
   <li>Challans: {len(challans)}</li>
